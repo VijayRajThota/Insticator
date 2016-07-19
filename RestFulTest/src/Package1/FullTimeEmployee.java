@@ -7,7 +7,7 @@ package Package1;
 public class FullTimeEmployee extends Employee {
    private String team;
    private String workPermit;
-   private int salary;
+   private long salary;
    
    public void setTeam(String x){
 	   this.team =x;
@@ -25,10 +25,10 @@ public class FullTimeEmployee extends Employee {
 	   return workPermit;
    }
    
-   public void setSalary(int a){
+   public void setSalary(long a){
 	   this.salary = a;
    }
-   public int getSalary(){
+   public long getSalary(){
 	   return salary;
    }
 	

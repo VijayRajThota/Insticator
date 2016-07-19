@@ -1,16 +1,16 @@
 package Package1;
 
 public class Employee {
- private int empId;
+ private long empId;
  private String empLastName;
  private String empFirstName;
  private String empMiddleName;
  private String empType;
  private String manager;
- public void setEmpId(int x ){
+ public void setEmpId(long x ){
 	 this.empId = x;
  }
- public int getEmpId(){
+ public long getEmpId(){
 	 return empId;
  }
  public void setEmpLastName(String lname){

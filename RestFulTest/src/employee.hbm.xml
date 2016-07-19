@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hibernate-mapping>
 <class name="Package1.Employee" table="Employee">
-<id name="EmpId" type="int" column="Emp_ID"></id>
+<id name="EmpId" type="long" column="Emp_ID"></id>
 <property name="EmpFirstName" type="string" column="FirstName" />
 <property name="EmpLastName"  type="string" column="LastName"/>
 <property name="EmpMiddleName" type="string" column="MiddleName"/>
@@ -12,7 +12,7 @@
   <key column="eid"></key>  
   <property name="Team" type="string" column="Team"/>  
   <property name="WorkPermit" type="string" column="WorkPermit"/>
-  <property name="Salary" type="int" column="Salary"/>
+  <property name="Salary" type="long" column="Salary"/>
 </joined-subclass> 
 
 <joined-subclass name="Package1.PartTimeEmployee" table="PartTimeEmployee">
