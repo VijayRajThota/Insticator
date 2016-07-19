@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="Package1.Employee" table="Employee">
+<id name="EmpId" type="long" column="Emp_ID"></id>
+<property name="EmpFirstName" type="string" column="FirstName" />
+<property name="EmpLastName"  type="string" column="LastName"/>
+<property name="EmpMiddleName" type="string" column="MiddleName"/>
+<property name="EmpType"  type="string" column="Emp_Type"/>
+<property name="Manager" type="string" column="Manager"/>
+
+<joined-subclass name="Package1.FullTimeEmployee" table="FullTimeEmployee">
+  <key column="eid"></key>  
+  <property name="Team" type="string" column="Team"/>  
+  <property name="WorkPermit" type="string" column="WorkPermit"/>
+  <property name="Salary" type="long" column="Salary"/>
+</joined-subclass> 
+
+<joined-subclass name="Package1.PartTimeEmployee" table="PartTimeEmployee">
+	<key column="eid"></key>
+	<property name="Project" type="string" column="Project"/>
+	<property name="Team" type="string" column="Team"/>
+	<property name="Payrate" type="double" column="Payrate"/>
+</joined-subclass>
+
+<joined-subclass name="Package1.Intern" table="Intern">
+	<key column="eid"></key>
+	<property name="University" type="string" column="University"/>
+	<property name="Project" type="string" column="Project"/>
+	<property name="Gpa" type="double" column="Gpa"/>
+	<property name="Payrate" type="double" column="Payrate"/>
+</joined-subclass>
+
+
+</class>
+</hibernate-mapping>
